@@ -1,7 +1,12 @@
 //Converter anos em dias 
-let resultado = parseInt(prompt("Qual a sua idade?") * 365);
-if (Number.isNaN(resultado)){
-    alert("C é imbecil caraio?")
-} else {
-    alert(`${resultado} dias`);
+calculo();
+
+function calculo(dias){
+    var dias = parseInt(prompt("Qual a sua idade?") * 365);
+    if (Number.isNaN(dias)){
+        alert("Isto não é um número");
+        calculo();
+    } else {
+        alert(`${dias} dias`);
+    }    
 }
